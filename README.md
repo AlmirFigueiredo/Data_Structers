@@ -15,11 +15,11 @@ The repository is structured as follows:
 - `Trees/`: Contains implementations and tests for tree data structures.
 - `Graphs/`: Contains implementations and tests for graph data structures.
 
-Each directory contains the implementation code, along with a corresponding `README.md` file that explains the data structure and its functionality. Additionally, a `Test/` directory within each data structure directory contains the test files for that particular data structure.
+Each directory contains the implementation code, along with a corresponding `README.md` file that explains the data structure and its functionality. Additionally, a `test/` directory within each data structure directory contains the test files for that particular data structure.
 
 ## Running the Tests
 
-The tests are written using the Google Test framework. To run the tests, navigate to the respective data structure's `Test/` directory and use the command `make` to compile the tests, followed by `./runTests` to execute them.
+The tests are written using the Google Test framework. To run the tests, navigate to the respective data structure's `test/` directory and use the command `make` to compile the tests, followed by `./runTests` to execute them.
 
 Please note that you will need to have Google Test installed on your machine to run these tests. You can find installation instructions [here](https://github.com/google/googletest/blob/master/googletest/README.md).
 
