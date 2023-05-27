@@ -5,7 +5,7 @@ template <typename T, std::size_t N>
 class StaticArray {
 public:
     StaticArray() {
-        for (std::size_t i = 0; i < N; i++) {
+        for (std::size_t i = 0; i < N; ++i) {
             data[i] = T();
         }
     }
@@ -77,7 +77,7 @@ public:
         return N == 0;
     }
     void clear() {
-        for(std::size_t i = 0; i < N; i++) {
+        for(std::size_t i = 0; i < N; ++i) {
             data[i] = T();
         }
     }
