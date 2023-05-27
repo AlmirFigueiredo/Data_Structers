@@ -1,39 +1,32 @@
-# Data Structures with C++
+# Data Structures Learning Repository
 
-This repository contains my study materials and exercises for understanding data structures in-depth using C++. 
+Welcome to my learning repository for Data Structures. The main goal of this project is to dive deep into the core concepts of data structures using C++, starting from basic concepts like arrays and gradually moving towards more complex structures like trees and graphs.
 
-## Introduction
+As part of the learning process, I will be writing comprehensive tests for each data structure I implement using Google Test. This will not only help solidify my understanding of these data structures but will also provide valuable practice in writing good tests.
 
-In this repository, I will be sharing code snippets, notes, and exercise solutions as I progress through my deep dive into data structures. The primary language for this study is C++ due to its efficiency and the granular control it offers, which is crucial for understanding the underlying concepts of data structures.
+## Repository Structure
 
-## Contents
+The repository is structured as follows:
 
-1. Arrays
-2. Linked Lists
-3. Stacks and Queues
-4. Trees
-5. Graphs
-6. Hashing
-7. Heaps
-8. Advanced Topics
+- `Arrays/`: Contains implementations and tests for array-related data structures.
+- `LinkedLists/`: Contains implementations and tests for linked list data structures.
+- `Stacks/`: Contains implementations and tests for stack data structures.
+- `Queues/`: Contains implementations and tests for queue data structures.
+- `Trees/`: Contains implementations and tests for tree data structures.
+- `Graphs/`: Contains implementations and tests for graph data structures.
 
-Each of these sections will be updated with notes and code snippets as I learn about them.
+Each directory contains the implementation code, along with a corresponding `README.md` file that explains the data structure and its functionality. Additionally, a `Test/` directory within each data structure directory contains the test files for that particular data structure.
 
-## Getting Started
+## Running the Tests
 
-To run these examples on your machine, you will need a C++ compiler. I am using [GCC](https://gcc.gnu.org/install/index.html), but any modern C++ compiler should work.
+The tests are written using the Google Test framework. To run the tests, navigate to the respective data structure's `Test/` directory and use the command `make` to compile the tests, followed by `./runTests` to execute them.
 
-## Usage
+Please note that you will need to have Google Test installed on your machine to run these tests. You can find installation instructions [here](https://github.com/google/googletest/blob/master/googletest/README.md).
 
-1. Clone the repository
-2. Navigate to the directory containing the file you want to run
-3. Compile the .cpp file using your C++ compiler
-4. Run the resulting executable
+## Contributing
 
-## Contribution
-
-While this repository is primarily for my personal use, I welcome suggestions and improvements. Feel free to open an issue or submit a pull request!
+While this is primarily a personal learning project, I am open to any suggestions or improvements! Please feel free to create an issue or submit a pull request if you have any ideas.
 
 ## License
 
-This project is licensed under the terms of the MIT license.
+This project is licensed under the MIT License. See the LICENSE file for more details.
