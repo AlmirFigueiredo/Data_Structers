@@ -27,6 +27,13 @@ public:
         }
         return data[index];
     }
+    
+    void modify(std::size_t index, const T& value) {
+        if(index >= N) {
+            throw std::out_of_range("Index out of bounds!");
+        }
+        data[index] = value;
+    }
 
 private:
     T data[N];
