@@ -1,5 +1,5 @@
 #include <cstddef>
-#include <stdexcept> // <-- Added this line to include necessary library
+#include <stdexcept> 
 
 template <typename T, std::size_t N>
 class StaticArray {

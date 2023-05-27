@@ -1,34 +1,39 @@
 #include <gtest/gtest.h>
-#include "../src/static_array.cpp"  // Include the source file to test
+#include "../src/static_array.cpp" // Include the source file to test
 #include <iterator>
 
 // Test case for basic initialization and access of StaticArray
-TEST(StaticArrayTestSuite, TestBasicInitializationAndAccess) {
+TEST(StaticArrayTestSuite, TestBasicInitializationAndAccess)
+{
     StaticArray<int, 5> testArray;
-    for(int i = 0; i < testArray.size(); ++i) {
+    for (int i = 0; i < testArray.size(); ++i)
+    {
         testArray[i] = i + 1;
         EXPECT_EQ(testArray[i], i + 1);
     }
 }
 
 // Test case for default initialization of StaticArray
-TEST(StaticArrayTestSuite, TestDefaultInitialization) {
+TEST(StaticArrayTestSuite, TestDefaultInitialization)
+{
     StaticArray<int, 5> testArray;
-    for(int i = 0; i < testArray.size(); ++i) {
+    for (int i = 0; i < testArray.size(); ++i)
+    {
         EXPECT_EQ(testArray[i], 0);
     }
 }
 
-// // Test case for modifying elements of StaticArray
-// TEST(StaticArrayTestSuite, TestModifyingElements) {
-//     StaticArray<int, 3> testArray = {10, 20, 30};
+// Test case for modifying elements of StaticArray
+TEST(StaticArrayTestSuite, TestModifyingElements)
+{
+    StaticArray<int, 3> testArray = {10, 20, 30};
 
-//     testArray[1] = 25;
-//     EXPECT_EQ(testArray[1], 25);
+    testArray[1] = 25;
+    EXPECT_EQ(testArray[1], 25);
 
-//     testArray[2] += 5;
-//     EXPECT_EQ(testArray[2], 35);
-// }
+    testArray[2] += 5;
+    EXPECT_EQ(testArray[2], 35);
+}
 
 // // Test case for access beyond the StaticArray boundary
 // TEST(StaticArrayTestSuite, TestOutOfBoundsAccess) {
@@ -63,7 +68,8 @@ TEST(StaticArrayTestSuite, TestDefaultInitialization) {
 //     EXPECT_EQ(testArray[1].age, 30);
 // }
 
-int main(int argc, char** argv) {
+int main(int argc, char **argv)
+{
     testing::InitGoogleTest(&argc, argv);
     return RUN_ALL_TESTS();
 }
