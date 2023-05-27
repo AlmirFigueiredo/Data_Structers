@@ -60,7 +60,19 @@ public:
         }
         return min;
     }
-
+    void sort() {
+        for(std::size_t i = 0; i < N-1; ++i) {
+            std::size_t minIndex = i;
+            for(std::size_t j = i+1; j < N; ++j) {
+                if(data[j] < data[minIndex]) {
+                    minIndex = j;
+                }
+            }
+            if(minIndex != i) {
+                std::swap(data[i], data[minIndex]);
+            }
+        }
+    }
 private:
     T data[N];
 };
