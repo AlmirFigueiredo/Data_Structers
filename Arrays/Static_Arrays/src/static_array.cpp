@@ -74,12 +74,12 @@ public:
         }
     }
     bool isEmpty() {
+        return N == 0;
+    }
+    void clear() {
         for(std::size_t i = 0; i < N; i++) {
-            if(data[i] != 0) {
-                return false;
-            }
+            data[i] = T();
         }
-        return true;
     }
 private:
     T data[N];
