@@ -35,6 +35,23 @@ public:
         data[index] = value;
     }
 
+    T sum() const {
+        T total = T();
+        for(std::size_t i = 0; i < N; ++i) {
+            total += data[i];
+        }
+        return total;
+    }
+    T max() const {
+        T max = data[0];
+        for(std::size_t i = 0; i < N; ++i) {
+            if(max < data[i]) {
+                max = data[i];
+            }
+        }
+        return max;
+    }
+
 private:
     T data[N];
 };
