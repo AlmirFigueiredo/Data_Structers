@@ -44,12 +44,21 @@ public:
     }
     T max() const {
         T max = data[0];
-        for(std::size_t i = 0; i < N; ++i) {
+        for(std::size_t i = 1; i < N; ++i) {
             if(max < data[i]) {
                 max = data[i];
             }
         }
         return max;
+    }
+    T min() const {
+        T min = data[0];
+        for(std::size_t i = 1; i < N; ++i) {
+            if(min > data[i]) {
+                min = data[i];
+            }
+        }
+        return min;
     }
 
 private:
