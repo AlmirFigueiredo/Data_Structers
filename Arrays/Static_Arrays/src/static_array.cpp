@@ -1,17 +1,33 @@
+#include <cstddef>
+#include <stdexcept> // <-- Added this line to include necessary library
+
 template <typename T, std::size_t N>
 class StaticArray {
-    public:
-        //Constructor
-        StaticArray() {
-            data = {};
+public:
+    StaticArray() {
+        for (std::size_t i = 0; i < N; i++) {
+            data[i] = T();
         }
-            
-        std::size_t size() const {
-            return N;
+    }
+
+    std::size_t size() const {
+        return N;
+    }
+
+    const T& operator[](std::size_t index) const {
+        if(index >= N) {
+            throw std::out_of_range("Index out of bounds!");
         }
+        return data[index];
+    }
 
-        
+    T& operator[](std::size_t index) {
+        if(index >= N) {
+            throw std::out_of_range("Index out of bounds!");
+        }
+        return data[index];
+    }
 
-    private:
-        T data[N];
+private:
+    T data[N];
 };
